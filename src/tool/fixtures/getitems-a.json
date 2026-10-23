@@ -1,0 +1,4 @@
+{"itemsResult":{"items":[
+{"asin":"EXAMPLE001","detailPageURL":"https://www.amazon.com/dp/EXAMPLE001?tag=demo-20","images":{"primary":{"medium":{"height":160,"url":"https://example.invalid/img/1.jpg","width":160}}},"itemInfo":{"title":{"displayValue":"示例商品 一号","label":"Title","locale":"en_US"}},"offersV2":{"listings":[{"price":{"money":{"amount":19.99,"currency":"USD","displayAmount":"$19.99"}}}]},"parentASIN":"EXAMPLEPAR"},
+{"asin":"EXAMPLE002","detailPageURL":"https://www.amazon.com/dp/EXAMPLE002?tag=demo-20","itemInfo":{"title":{"displayValue":"示例商品 二号（无报价）"}},"offersV2":null}
+]}}

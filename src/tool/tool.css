@@ -1,0 +1,17 @@
+/* 亚马逊 ASIN 批量查询：只用 kit.css 的变量，类名以 al- 开头。 */
+.al-root { flex: 1; min-height: 0; display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start; }
+.al-side { flex: 0 1 350px; min-width: 280px; padding: 14px 16px; display: grid; gap: 10px; }
+.al-main { flex: 1 1 400px; min-width: 0; padding: 14px 16px; display: grid; gap: 12px; align-content: start; min-height: 320px; }
+.al-side .k-section { margin: 6px 0 0; }
+.al-note { display: flex; align-items: flex-start; gap: 6px; flex-wrap: wrap; font-size: .88em; margin: 0; }
+.al-risk { font-size: .88em; margin: 0; padding: 8px 10px; border-radius: var(--radius); background: var(--side); line-height: 1.55; }
+.al-asins { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .9em; resize: vertical; }
+.al-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.al-busy { display: flex; align-items: center; gap: 8px; }
+.al-sum { display: grid; grid-template-columns: repeat(auto-fit, minmax(78px, 1fr)); gap: 12px; }
+.al-sum > div { display: grid; gap: 2px; padding: 10px 12px; border-radius: var(--radius); background: var(--side); }
+.al-sum b { font-size: 1.35em; line-height: 1.2; }
+.al-sum .k-muted { font-size: .85em; }
+.al-file { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.al-table { max-height: 360px; }
+.al-title { width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
