@@ -119,9 +119,9 @@ export function Main({ ctx }: { ctx?: Ctx }) {
       <details className="al-cred" open={!prefs.demo}>
         <summary><KeyRound size={14} />授权凭据<span className="k-muted">{prefs.demo ? '演示模式不需要' : '只保存在本机，只发给亚马逊官方地址'}</span></summary>
         <div className="al-cred-grid">
-          {credInput('clientId', '凭据编号', false)}
-          {credInput('clientSecret', '凭据密钥', true)}
-          {credInput('partnerTag', '联盟追踪标识（形如 店名-20）', false)}
+          {credInput('clientId', '凭据编号（Credential ID）', false)}
+          {credInput('clientSecret', '凭据密钥（Credential Secret）', true)}
+          {credInput('partnerTag', '联盟追踪标识（Partner Tag，形如 店名-20）', false)}
         </div>
         <p className="k-muted al-note"><ShieldCheck size={13} /> 凭据不写日志。<button className="k-link" onClick={() => void openLink(DOCS)}>官方接口文档<ExternalLink size={12} /></button></p>
       </details>
