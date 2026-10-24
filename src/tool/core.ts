@@ -184,9 +184,9 @@ export function explainError(status: number, body: string): string {
   let detail = '';
   try { const j = o(JSON.parse(body)); detail = s(j.message) || s(j.error_description) || s(j.error) || s(j.reason); } catch { /* 非 JSON */ }
   const tail = detail ? `（${detail.slice(0, 120)}）` : '';
-  if (status === 400) return `请求被拒绝（400）${tail}：检查 ASIN、站点和 Partner Tag 是否匹配`;
-  if (status === 401) return `凭据无效或已过期（401）${tail}：检查 Credential ID / Secret，以及凭据版本是否与站点区域一致`;
-  if (status === 403) return `没有权限（403）${tail}：Associates 账号可能不满足使用条件，或凭据未授权该站点`;
+  if (status === 400) return `请求被拒绝（400）${tail}：检查 ASIN、站点和联盟追踪标识是否匹配`;
+  if (status === 401) return `凭据无效或已过期（401）${tail}：检查凭据编号和凭据密钥，以及凭据版本是否与站点区域一致`;
+  if (status === 403) return `没有权限（403）${tail}：亚马逊联盟账号可能不满足使用条件，或凭据未授权该站点`;
   if (status === 429) return `请求太频繁（429）${tail}`;
   if (status >= 500) return `亚马逊服务暂时不可用（${status}）${tail}`;
   return `请求失败（${status}）${tail}`;

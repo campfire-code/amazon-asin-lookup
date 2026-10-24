@@ -12,7 +12,7 @@ export interface Io {
 export interface Outcome { path: string; rows: ResultRow[]; sum: ReturnType<typeof summary> }
 
 export function validate(cred: Credentials, market: string, asins: string[], demo: boolean): string | null {
-  if (!demo && !credReady(cred)) return '请先填写 Credential ID、Credential Secret 和 Partner Tag（见「怎么申请」）';
+  if (!demo && !credReady(cred)) return '请先填写凭据编号、凭据密钥和联盟追踪标识（申请方法见使用说明）';
   if (!marketplaceByCode(market)) return '请选择站点';
   if (!asins.length) return '请先输入或导入至少一个有效的 ASIN';
   return null;
@@ -29,7 +29,7 @@ export async function runLookup(a: {
   const sum = summary(rows);
   const info: (string | number)[][] = [
     ['查询时间', a.now.toLocaleString('zh-CN')], ['站点', `${m.name}（${m.code}，${m.domain}）`],
-    ['数据来源', '亚马逊官方 Creators API（GetItems），未抓取网页'],
+    ['数据来源', '亚马逊官方接口（商品查询），未抓取网页'],
     ['结果', `共 ${sum.total} 个，查到 ${sum.ok}，未返回 ${sum.missing}，失败 ${sum.failed}`],
     ['说明', '价格以接口返回为准，可能与页面实时价格有差异；价格字段结构未经官方文档核实'],
   ];

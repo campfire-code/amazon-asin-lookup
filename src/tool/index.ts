@@ -7,7 +7,7 @@ import { Main } from './Main';
 const tool: CustomTool = {
   id: 'e19',
   name: '亚马逊 ASIN 批量查询',
-  tagline: '粘贴或导入一批 ASIN，通过亚马逊官方 Creators API 批量查标题、价格、主图，导出 Excel。',
+  tagline: '粘贴或导入一批 ASIN，通过亚马逊官方接口批量查标题、价格、主图，导出 Excel。',
   icon: ScanBarcode,
   category: '电商运营',
   type: 'data',

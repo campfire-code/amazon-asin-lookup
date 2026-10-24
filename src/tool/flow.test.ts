@@ -31,7 +31,7 @@ const US = marketplaceByCode('US')!;
 
 describe('查询流程', () => {
   it('校验', () => {
-    expect(validate({ clientId: '', clientSecret: '', partnerTag: '' }, 'US', ['A'], false)).toContain('Credential ID');
+    expect(validate({ clientId: '', clientSecret: '', partnerTag: '' }, 'US', ['A'], false)).toContain('凭据编号');
     expect(validate(cred, 'XX', ['A'], false)).toContain('站点');
     expect(validate(cred, 'US', [], false)).toContain('ASIN');
     expect(validate({ clientId: '', clientSecret: '', partnerTag: '' }, 'US', ['A'], true)).toBeNull();

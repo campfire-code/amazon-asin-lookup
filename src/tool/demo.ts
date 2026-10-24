@@ -11,7 +11,7 @@ export const demoFetcher: Fetcher = async (url, init) => {
   const errors: unknown[] = [];
   ids.forEach((id) => {
     const n = Number(id.replace(/\D/g, '')) || 0;
-    if (id.endsWith('9')) { errors.push({ code: 'ItemNotAccessible', message: `The ItemId ${id} provided in the request is invalid.` }); return; }
+    if (id.endsWith('9')) { errors.push({ code: 'ItemNotAccessible', message: `商品编号 ${id} 无法访问或不存在` }); return; }
     const priced = n % 5 !== 3;
     items.push({
       asin: id, detailPageURL: `https://www.amazon.com/dp/${id}`, itemInfo: { title: { displayValue: `示例·${NAMES[n % NAMES.length]}` } },

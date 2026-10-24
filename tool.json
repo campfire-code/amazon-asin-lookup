@@ -2,12 +2,13 @@
   "id": "e19",
   "slug": "amazon-asin-lookup",
   "name": "亚马逊 ASIN 批量查询",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repo": "campfire-code/amazon-asin-lookup",
   "license": "MIT",
   "ui": {
-    "layout": "a",
-    "palette": "teal"
+    "layout": "c",
+    "palette": "teal",
+    "accent": "#C0322A"
   },
   "upstream": null
 }
